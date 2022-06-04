@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% block content %}
+    <h1>{{ game_name }}</h1>
+    <div class="row">
+        {% for song in all_songs %}
+            <div class="col">
+            <div class="card" style="width: 18rem;">
+                <div class="card-body">
+                    <img src="{{ song.img }}" class="card-img-top" alt="Picture showing song location">
+                    <h5 class="card-title">{{ song.ost_index }}  {{ song.name }}</h5>
+                    <p class="card-text">{{ song.description }}</p>
+                </div>
+            </div>
+            </div>
+        {% endfor %}
+    </div>
+    {% endblock %}
+</body>
+</html>
