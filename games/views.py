@@ -18,4 +18,5 @@ def GameHTML(request, game_name):
 
     if (game_songs.count == 0):
         return render(request, 'index.html', { 'games' : Game.objects.all() })
+        
     return render(request, 'songs.html', { 'game_name' : game_name, 'all_songs' : game_songs})
