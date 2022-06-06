@@ -6,6 +6,7 @@ class Game(models.Model):
     name = models.CharField(max_length=255)
     song_count = models.IntegerField()
     description = models.CharField(max_length=2083)
+    color = models.CharField(max_length=10)
 
     def __str__(self) -> str:
         return self.name

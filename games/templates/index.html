@@ -13,12 +13,12 @@
     <div class="row">
         {% for game in games %}
             <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 13rem; background-color:aliceblue;">
                 <div class="card-body">
                     <img src="{{ game.img }}" class="card-img-top" alt="Picture of game">
-                    <h5 class="card-title">{{ game.name }}</h5>
-                    <p class="card-text">{{ game.song_count }}</p>
-                    <a href="/{{ game.name }}" class="btn btn-primary">See Songs</a>
+                    <center><h5 class="card-title">{{ game.name }}</h5></center>
+                    <center><p class="card-text">Song Count: {{ game.song_count }}</p></center>
+                    <center><a href="/{{ game.name }}" class="btn btn-primary">See Songs</a></center>
                 </div>
             </div>
             </div>
