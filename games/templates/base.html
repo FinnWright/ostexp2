@@ -20,15 +20,11 @@
       </a>
     </div>
     <form class="d-flex">
-        <input class="form-control me-2" type="search" id="gameSearch" placeholder="Search for a Game" aria-label="Search">
-        <button class="btn btn-outline-success" onclick="Find()">Find</button>
-        <script>
-            function Find(){
-                var input = document.getElementById("gameSearch").value;
-                console.log(input);
-                window.location.assign(`/${input}/`)
-            }
-        </script>
+        <form action="/gameSearch">
+          <label for="gameSearch">Game Search</label>
+          <input type="search" name="q" id="gameSearch">
+          <input type="submit" value="Search">
+        </form>
     </form>
   </nav>
   <div>
