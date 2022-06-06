@@ -17,7 +17,7 @@ def GameHTML(request, game_name):
     game_songs.sort()
 
     logging.basicConfig(level=logging.INFO)
-    logging.debug(game_name + game_songs.count)
+    logging.debug(game_songs.count)
 
     #Problem Area:
     if (game_songs.count == 0):
