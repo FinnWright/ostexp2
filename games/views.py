@@ -6,7 +6,7 @@ def AllGames(request):
     return render(request, 'index.html', { 'games' : Game.objects.all() })
 
 def GameHTML(request, game_name):
-    if (not Game.objects.exists(name=game_name)):
+    if (not Game.objects.filter(name=game_name).exists()):
         return render(request, 'index.html', { 'games' : Game.objects.all() })
 
     game_ = Game.objects.get(name=game_name)
