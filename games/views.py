@@ -8,11 +8,9 @@ def AllGames(request):
 def GameHTML(request, game_name):
     game_ = Game.objects.get(name=game_name)
 
-    game_songs = Song.objects.filter(game=game_)
+    game_songs = Song.objects.filter(game=game_).order_by('ost_index')
 
     if (game_songs.count == 0):
         return render(request, 'index.html', { 'games' : Game.objects.all() })
-
-    game_songs.order_by('ost_index')
 
     return render(request, 'songs.html', { 'game_name' : game_name, 'all_songs' : game_songs })
