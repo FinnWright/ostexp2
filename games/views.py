@@ -8,7 +8,8 @@ def AllGames(request):
 def GameHTML(request, game_name):
     game_ = Game.objects.get(name=game_name)
 
-    game_songs = Song.objects.filter(game=game_)
+    #game_songs = Song.objects.filter(game=game_)
+    game_songs = get_object_or_404(Song, pk=game_.id)
 
     if (game_songs == None):
         return render(request, 'index.html', { 'games' : Game.objects.all() })
