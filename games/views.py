@@ -3,6 +3,10 @@ from django.http import HttpResponse
 from .models import Game, Song
 
 def AllGames(request):
+    name = request.GET.get('search')
+    if (name != None):
+        return GameHTML(request, name)
+
     return render(request, 'index.html', { 'games' : Game.objects.all() })
 
 def GameHTML(request, game_name):
