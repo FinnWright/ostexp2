@@ -2,7 +2,7 @@ from telnetlib import GA
 from django.db import models
 
 class Game(models.Model):
-    img = models.CharField(max_length=99999)
+    img = models.CharField(max_length=30000)
     name = models.CharField(max_length=255)
     song_count = models.IntegerField()
     description = models.CharField(max_length=2083)
@@ -12,7 +12,7 @@ class Game(models.Model):
         return self.name
 
 class Song(models.Model):
-    img = models.CharField(max_length=8000)
+    img = models.CharField(max_length=30000)
     name = models.CharField(max_length=255)
     ost_index = models.IntegerField()
     description = models.CharField(max_length=2083)
