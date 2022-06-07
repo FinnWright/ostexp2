@@ -12,7 +12,7 @@
     <h1 style="margin:10px">Games</h1>
     <div class="row">
         {% for game in games %}
-            <div class="col">
+            <div class="col" style="max-width: 20%;">
             <div class="card" style="width: 13rem; background-color: var(--color); margin: 20px; --color : {{game.color}}">
                 <div class="card-body">
                     <img src="{{ game.img }}" class="card-img-top" alt="Picture of game">
