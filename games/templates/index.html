@@ -9,17 +9,17 @@
 </head>
 <body>
     {% block content %}
-    <h1>Games</h1>
+    <h1 style="margin:10px">Games</h1>
     <div class="row">
         {% for game in games %}
             <div class="col">
-            <div class="card" style="width: 13rem; background-color: var(--color); --color : {{game.color}}">
+            <div class="card" style="width: 13rem; background-color: var(--color); margin: 20px; --color : {{game.color}}">
                 <div class="card-body">
                     <img src="{{ game.img }}" class="card-img-top" alt="Picture of game">
                     <center>
-                        <h5 class="card-title">{{ game.name }}</h5>
-                        <p class="card-text">Song Count: {{ game.song_count }}</p>
-                        <a href="/{{ game.name }}" class="btn btn-primary">See Songs</a>
+                        <h5 class="card-title" style="color: black;"><b>{{ game.name }}</b></h5>
+                        <p class="card-text" style="color: black;">Song Count: {{ game.song_count }}</p>
+                        <a href="/{{ game.name }}" class="btn btn-primary" style="color: black; background-color: white; border-color: black;">See Songs</a>
                     </center>
                 </div>
             </div>

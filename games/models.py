@@ -17,6 +17,7 @@ class Song(models.Model):
     ost_index = models.IntegerField()
     description = models.CharField(max_length=2083)
     game = models.ForeignKey(Game, on_delete=models.CASCADE)
+    color = models.CharField(max_length=10)
 
     def __str__(self) -> str:
         return self.name

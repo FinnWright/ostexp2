@@ -9,15 +9,17 @@
 </head>
 <body>
     {% block content %}
-    <h1>{{ game_name }}</h1>
+    <h1 style="margin: 10px;">{{ game_name }}</h1>
     <div class="row">
         {% for song in all_songs %}
             <div class="col">
-            <div class="card" style="width: 18rem;">
+            <div class="card" style="width: 18rem; background-color: var(--color); margin: 20px; --color : {{song.color}}">
                 <div class="card-body">
                     <img src="{{ song.img }}" class="card-img-top" alt="Picture showing song location">
-                    <h5 class="card-title">{{ song.ost_index }}  {{ song.name }}</h5>
-                    <p class="card-text">{{ song.description }}</p>
+                    <center>
+                        <h5 class="card-title" style="color: black;">{{ song.ost_index }}  {{ song.name }}</h5>
+                        <p class="card-text" style="color: black;">{{ song.description }}</p>
+                    </center>
                 </div>
             </div>
             </div>
